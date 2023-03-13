@@ -30,7 +30,7 @@ public class Controller {
 		Employee e = tb.getEmp();
 		String uname = tb.getUname();
 		
-		Integer result = template.postForObject("http://localhost:8080/user/verify", uname,Integer.class);
+		Integer result = template.postForObject("http://User-Ser/user/verify", uname,Integer.class);
 		if (result != 0) {
 			e.setCreatedUserId(result);
 		return empser.addEmp(e);
